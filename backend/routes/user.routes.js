@@ -20,6 +20,6 @@ userRouter.post('/login', [
 );
 
 userRouter.get('/profile', authMiddleware.authUser, userController.getUserProfile);
-userRouter.get('/logout', authMiddleware.authUser, userController.logoutUser)
+userRouter.get('/logout', authMiddleware.authUser, userController.logoutUser);
 
 module.exports = userRouter;

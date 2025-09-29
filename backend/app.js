@@ -5,6 +5,7 @@ const cors = require('cors');
 const connectToDB = require('./db/db');
 const userRoutes = require('./routes/user.routes')
 const cookieParser = require('cookie-parser');
+const captionRoutes = require('./routes/caption.routes');
 
 const app = express();
 
@@ -20,5 +21,6 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', userRoutes);
+app.use('/captions', captionRoutes);
 
 module.exports = app;
